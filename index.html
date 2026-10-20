@@ -1,6 +1,5 @@
 <!doctype html>
-
-<html lang="az">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,7 +14,7 @@
     <meta property="og:image" content="preview.png" />
     <title>AlphaBS</title>
     <link rel="icon" type="image/png" href="icon.png" />
-    <link rel="stylesheet" href="alphabs.css" />
+    <link rel="stylesheet" href="style.css?v=1" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
@@ -29,6 +28,7 @@
     />
   </head>
   <body>
+    <script>try{if(localStorage.getItem("alphabs-theme")==="dark")document.body.classList.add("dark-mode")}catch(e){}</script>
     <header>
       <div class="container navbar">
         <div class="menu-toggle" id="menu-toggle">
@@ -43,22 +43,15 @@
         <nav>
           <ul>
             <li>
-              <a class="home" href="./index.html">
-                <i class="fa-solid fa-house"></i>
-                Home
-              </a>
-            </li>
-
-            <li>
               <a class="about" href="javascript:void(0)">
                 <i class="fa-solid fa-circle-info"></i>
                 About
               </a>
             </li>
             <li>
-              <a class="support" href="./support.html">
-                <i class="fa-solid fa-screwdriver-wrench"></i>
-                Support
+              <a class="contact-link" href="./contact.html">
+                <i class="fa-solid fa-envelope"></i>
+                Contact
               </a>
             </li>
 
@@ -67,28 +60,9 @@
                 target="_blank"
                 class="sosial_media"
                 href="https://linktr.ee/alphabs24"
-                ><i class="fa-brands fa-linktree"></i> Sosial Media
+                ><i class="fa-brands fa-linktree"></i> Social Media
               </a>
             </li>
-
-            <!-- <li>
-              <div class="auth">
-                <button id="loginBtn">
-                  <i class="fa-solid fa-right-to-bracket"></i>
-                  Sign In
-                </button>
-
-                <div class="profile" id="profileBox" style="display: none">
-                  <img id="profileImg" src="" alt="" />
-
-                  <span id="profileName"></span>
-
-                  <button id="logoutBtn">
-                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
-                  </button>
-                </div>
-              </div>
-            </li> -->
 
             <li>
               <button class="theme-toggle" id="theme-toggle">
@@ -111,27 +85,24 @@
           <i class="fa-solid fa-xmark"></i>
         </div>
       </div>
-      <a class="home" href="./index.html"
-        ><i class="fa-solid fa-house"></i> Home
-      </a>
       <a class="about" href="javascript:void(0)">
         <i class="fa-solid fa-circle-info"></i> About
       </a>
-      <a class="support" href="./support.html">
-        <i class="fa-solid fa-screwdriver-wrench"></i>
-        Support
+      <a class="contact-link" href="./contact.html">
+        <i class="fa-solid fa-envelope"></i>
+        Contact
       </a>
       <a target="_blank" class="yt" href="https://www.youtube.com/@alphabs24"
         ><i class="fa-brands fa-youtube"></i> YouTube Channel
       </a>
-      <a target="_blank" class="dsc" href="https://discord.gg/sxbRRPRnEg"
-        ><i class="fa-brands fa-discord"></i> Discord Server
+      <a target="_blank" class="tg" href="https://t.me/alpbs24"
+        ><i class="fa-brands fa-telegram"></i> Telegram Channel
       </a>
       <a target="_blank" href="https://www.tiktok.com/@alphabs24"
         ><i class="fa-brands fa-tiktok"></i> TikTok Channel
       </a>
       <a target="_blank" class="sosial_media" href="https://linktr.ee/alphabs24"
-        ><i class="fa-brands fa-linktree"></i> All My Sosial Media
+        ><i class="fa-brands fa-linktree"></i> All My Social Media
       </a>
     </div>
     <div class="overlay" id="overlay"></div>
@@ -157,11 +128,11 @@
         <div class="hero-links">
           <a
             target="_blank"
-            href="https://discord.gg/sxbRRPRnEg"
-            class="hero-link discord-link"
+            href="https://t.me/alpbs24"
+            class="hero-link telegram-link"
           >
-            <i class="fa-brands fa-discord"></i>
-            Join Discord!
+            <i class="fa-brands fa-telegram"></i>
+            Join Telegram!
           </a>
 
           <a
@@ -178,7 +149,25 @@
 
     <section class="features">
       <div class="container">
-        <h2>Follow me on other platforms & social media!</h2>
+        <div class="stats">
+          <div class="stat-card"><h3 data-count="2500"><span class="num">2.5</span><span class="unit show">K</span><span class="plus show">+</span></h3><p>YouTube Subscribers</p></div>
+          <div class="stat-card"><h3>24/7</h3><p>Active Shorts Content</p></div>
+          <a class="stat-card stat-link" href="#platforms"><h3>3</h3><p>Platforms To Follow <i class="fa-solid fa-arrow-down"></i></p></a>
+        </div>
+
+        <h2 class="perks-title">What You Can Find</h2>
+        <div class="perks">
+          <div class="perk"><i class="fa-solid fa-bolt"></i><h3>24/7 Shorts</h3><p>Fresh Brawl Stars Shorts uploaded almost every day.</p></div>
+          <div class="perk"><i class="fa-solid fa-circle-play"></i><h3>Gameplay Videos</h3><p>High-quality gameplay, strategies and satisfying edits.</p></div>
+          <div class="perk"><i class="fa-solid fa-gift"></i><h3>Giveaways &amp; Events</h3><p>Community events and giveaways for active supporters.</p></div>
+          <div class="perk"><i class="fa-brands fa-telegram"></i><h3>Telegram Community</h3><p>Stay updated and connect with other players.</p></div>
+          <div class="perk"><i class="fa-solid fa-wand-magic-sparkles"></i><h3>Creative Projects</h3><p>Gaming entertainment and new creative ideas.</p></div>
+          <div class="perk"><i class="fa-solid fa-handshake"></i><h3>Collaborations</h3><p>Bigger content ideas and future collaborations.</p></div>
+          <div class="perk"><i class="fa-solid fa-lightbulb"></i><h3>Tips &amp; Strategies</h3><p>Smart tips, tricks and ideas to help you play better.</p></div>
+          <div class="perk"><i class="fa-solid fa-users"></i><h3>Friendly Community</h3><p>A welcoming place where everyone can have fun together.</p></div>
+        </div>
+
+        <h2 id="platforms">Follow me on other platforms & social media!</h2>
 
         <div class="features-grid">
           <a
@@ -201,21 +190,21 @@
           </a>
 
           <a
-            href="https://discord.gg/sxbRRPRnEg"
-            class="card dsc"
+            href="https://t.me/alpbs24"
+            class="card tg"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Join AlphaBS Discord Server"
+            aria-label="Join AlphaBS Telegram Channel"
           >
-            <i class="fa-brands fa-discord alphabs_brands"></i>
-            <h3>Discord Server</h3>
-            <p>user: @alphabs24</p>
+            <i class="fa-brands fa-telegram alphabs_brands"></i>
+            <h3>Telegram Channel</h3>
+            <p>user: @alpbs24</p>
 
             <p>
-              Official AlphaBS community server for Brawl Stars players. Join
+              Official AlphaBS Telegram channel for Brawl Stars players. Join
               for updates, discussions, community events, teamwork, and
               exclusive content. <br />
-              Tap To Visit My Discord Server!
+              Tap To Visit My Telegram Channel!
             </p>
           </a>
           <a
@@ -248,10 +237,6 @@
               <img src="logo.png" alt="Alpha Logo" />
               <span>Alpha</span>
             </div>
-
-            <a href="./index.html" class="about-home">
-              <i class="fa-solid fa-house"></i>
-            </a>
             <button class="about-theme-toggle" id="about-theme-toggle">
               <i class="fa-solid fa-moon"></i>
             </button>
@@ -272,7 +257,7 @@
 
             <li>Future giveaways and community events</li>
 
-            <li>Active Discord communication and teamwork</li>
+            <li>Active Telegram communication and teamwork</li>
 
             <li>Gaming entertainment and creative projects</li>
 
@@ -343,22 +328,22 @@
           </p>
 
           <p>
-            Another major part of Alpha is the Discord server, which acts as the
-            center of communication and community interaction. The server allows
+            Another major part of Alpha is the Telegram channel, which acts as the
+            center of communication and community interaction. The channel allows
             people to stay connected, meet new players, chat together, discuss
             games, share opinions, participate in events, and become part of the
             growing Alpha community. Future giveaways, announcements,
             activities, and community projects will also be organized mainly
-            through the Discord server.
+            through the Telegram channel.
           </p>
 
           <p>
-            The goal of the Discord community is not simply to create another
-            random server, but to build an active, friendly, entertaining, and
+            The goal of the Telegram community is not simply to create another
+            random channel, but to build an active, friendly, entertaining, and
             welcoming place where people can have fun together, support each
             other, and enjoy spending time online. Whether someone wants to
             talk, play games, participate in events, or simply stay updated with
-            new Alpha content, the Discord server is designed to become the main
+            new Alpha content, the Telegram channel is designed to become the main
             hub for the community.
           </p>
 
@@ -383,7 +368,7 @@
           <p>
             None of this growth would be possible without the people who support
             the community, watch the content, interact with videos, join the
-            Discord server, and continue being part of this journey. Every
+            Telegram channel, and continue being part of this journey. Every
             supporter plays an important role in helping Alpha move forward and
             become something greater over time.
           </p>
@@ -397,9 +382,9 @@
     </div>
     <footer>
       <div class="container">
-        © 2025 AlphaBS | Designed with HTML & CSS | ChatGPT
+        © 2025 AlphaBS | Designed with HTML & CSS | <a class="claude-link" href="https://claude.ai" target="_blank" rel="noopener noreferrer">Claude AI</a>
       </div>
     </footer>
-    <script src="script.js"></script>
+    <script src="script.js?v=1"></script>
   </body>
 </html>

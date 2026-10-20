@@ -15,9 +15,8 @@
   box-sizing: border-box;
 }
 
-html,
 body {
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 body {
@@ -598,15 +597,15 @@ button.card {
 /* PLATFORM COLORS */
 
 .sosial_media:hover {
-  color: rgb(0, 255, 0);
+  color: #16a34a;
 }
 
 .yt:hover {
   color: red;
 }
 
-.dsc:hover {
-  color: darkblue;
+.tg:hover {
+  color: #229ed9;
 }
 
 /* ================= FOOTER ================= */
@@ -749,23 +748,6 @@ body.dark-mode .about-theme-toggle {
   cursor: pointer;
 }
 
-body.dark-mode .about-box::-webkit-scrollbar {
-  width: 10px;
-}
-
-body.dark-mode .about-box::-webkit-scrollbar-track {
-  background: #111827;
-}
-
-body.dark-mode .about-box::-webkit-scrollbar-thumb {
-  background: #334155;
-  border-radius: 20px;
-}
-
-body.dark-mode .about-box::-webkit-scrollbar-thumb:hover {
-  background: #475569;
-}
-
 /* ================= MOBILE ================= */
 
 @media (max-width: 900px) {
@@ -875,4 +857,202 @@ textarea {
 .counter {
   text-align: right;
   color: gray;
+}
+
+/* ===== DARK MODE: gözə yumşaq palitra (yeni) ===== */
+body.dark-mode {
+  background: #0f172a;
+  color: #e2e8f0;
+}
+body.dark-mode header {
+  background: rgba(15, 23, 42, 0.92);
+  border-color: #2a3650;
+}
+body.dark-mode nav a,
+body.dark-mode .theme-toggle,
+body.dark-mode .sidebar a,
+body.dark-mode .about-close,
+body.dark-mode .about-home,
+body.dark-mode .about-theme-toggle,
+body.dark-mode .about-top h2,
+body.dark-mode .about-content h3,
+body.dark-mode .about-content strong {
+  color: #e2e8f0;
+}
+body.dark-mode .sidebar,
+body.dark-mode .about-box,
+body.dark-mode .about-top {
+  background: #1a2438;
+}
+body.dark-mode .about-top {
+  border-bottom-color: #2a3650;
+}
+body.dark-mode .support {
+  background: #0f172a;
+}
+body.dark-mode .support-box #supportForm {
+  background: #1a2438;
+  border-color: #2a3650;
+}
+body.dark-mode .input-group input,
+body.dark-mode .input-group textarea {
+  background: #131c2f;
+  border-color: #334155;
+  color: #e2e8f0;
+}
+body.dark-mode .features {
+  background: #131c2f;
+}
+body.dark-mode .card,
+body.dark-mode button.card {
+  background: #1a2438;
+  color: #e2e8f0;
+  border-color: #2a3650;
+}
+body.dark-mode .support-title p,
+body.dark-mode .card p,
+body.dark-mode .about-content p,
+body.dark-mode .alpha-list li,
+body.dark-mode footer {
+  color: #a9b6ca;
+}
+body.dark-mode footer {
+  background: #0f172a;
+  border-color: #2a3650;
+}
+
+/* ===== SMOOTH DÜYMƏLƏR, SƏHİFƏ KEÇİDİ, CLAUDE LİNKİ (yeni) ===== */
+nav a,
+.sidebar a,
+.hero-link,
+.send-btn,
+.stat-link,
+.theme-toggle,
+.about-theme-toggle,
+.close-btn,
+.about-close,
+.menu-toggle,
+.about-home {
+  transition:
+    transform 0.25s ease,
+    color 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+nav a:active,
+.sidebar a:active,
+.hero-link:active,
+.send-btn:active,
+.stat-link:active,
+.close-btn:active,
+.about-close:active,
+.menu-toggle:active,
+.about-home:active {
+  transform: scale(0.94);
+}
+.theme-toggle:active {
+  transform: rotate(180deg) scale(0.9);
+}
+.about-theme-toggle:active {
+  transform: scale(0.9);
+}
+.card:active {
+  transform: translateY(-10px) scale(0.97);
+}
+body {
+  animation: pageIn 0.5s ease;
+}
+@keyframes pageIn {
+  from {
+    opacity: 0;
+  }
+}
+body.leaving {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.claude-link {
+  color: #d97757;
+  font-weight: 700;
+  transition: 0.25s;
+}
+.claude-link:hover {
+  text-decoration: underline;
+  opacity: 0.85;
+}
+
+/* dark rejimdə ölçülər dəyişməsin (yeni) */
+body.dark-mode .features {
+  margin-top: -30px;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+}
+body.dark-mode .about-box {
+  scrollbar-color: #334155 #1a2438;
+}
+
+/* ===== GİRİŞ ANİMASİYASI + YUXARI QAYIT (yeni) ===== */
+header {
+  animation: headerIn 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+@keyframes headerIn {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.8s ease var(--d, 0s),
+    transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) var(--d, 0s);
+}
+.reveal.in {
+  opacity: 1;
+  transform: none;
+}
+.to-top {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  width: 46px;
+  height: 46px;
+  border: 0;
+  border-radius: 50%;
+  background: #2563eb;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.35);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(16px);
+  transition: opacity 0.3s, transform 0.3s, visibility 0.3s;
+  z-index: 900;
+}
+.to-top.show {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+}
+.to-top.show:hover {
+  transform: translateY(-4px);
+}
+.to-top.show:active {
+  transform: scale(0.92);
+}
+@media (prefers-reduced-motion: reduce) {
+  header,
+  body {
+    animation: none;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }

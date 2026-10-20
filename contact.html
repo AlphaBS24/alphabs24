@@ -12,9 +12,9 @@
     <meta property="og:title" content="AlphaBS" />
     <meta property="og:description" content="Brawl Stars Community" />
     <meta property="og:image" content="preview.png" />
-    <title>Alpha's Support</title>
+    <title>Contact With AlphaBS</title>
     <link rel="icon" type="image/png" href="icon.png" />
-    <link rel="stylesheet" href="./support.css" />
+    <link rel="stylesheet" href="./style.css?v=1" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
@@ -28,6 +28,7 @@
     />
   </head>
   <body>
+    <script>try{if(localStorage.getItem("alphabs-theme")==="dark")document.body.classList.add("dark-mode")}catch(e){}</script>
     <header>
       <div class="container navbar">
         <div class="menu-toggle" id="menu-toggle">
@@ -60,28 +61,9 @@
                 target="_blank"
                 class="sosial_media"
                 href="https://linktr.ee/alphabs24"
-                ><i class="fa-brands fa-linktree"></i> Sosial Media
+                ><i class="fa-brands fa-linktree"></i> Social Media
               </a>
             </li>
-
-            <!-- <li>
-              <div class="auth">
-                <button id="loginBtn">
-                  <i class="fa-solid fa-right-to-bracket"></i>
-                  Sign In
-                </button>
-
-                <div class="profile" id="profileBox" style="display: none">
-                  <img id="profileImg" src="" alt="" />
-
-                  <span id="profileName"></span>
-
-                  <button id="logoutBtn">
-                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
-                  </button>
-                </div>
-              </div>
-            </li> -->
 
             <li>
               <button class="theme-toggle" id="theme-toggle">
@@ -114,25 +96,22 @@
       <a target="_blank" class="yt" href="https://www.youtube.com/@alphabs24"
         ><i class="fa-brands fa-youtube"></i> YouTube Channel
       </a>
-      <a target="_blank" class="dsc" href="https://discord.gg/sxbRRPRnEg"
-        ><i class="fa-brands fa-discord"></i> Discord Server
+      <a target="_blank" class="tg" href="https://t.me/alpbs24"
+        ><i class="fa-brands fa-telegram"></i> Telegram Channel
       </a>
       <a target="_blank" href="https://www.tiktok.com/@alphabs24"
         ><i class="fa-brands fa-tiktok"></i> TikTok Channel
       </a>
       <a target="_blank" class="sosial_media" href="https://linktr.ee/alphabs24"
-        ><i class="fa-brands fa-linktree"></i> All My Sosial Media
+        ><i class="fa-brands fa-linktree"></i> All My Social Media
       </a>
-      <!-- <a class="support" href="./support.html">
-        <i class="fa-solid fa-screwdriver-wrench"></i>
-        Support
-      </a> -->
     </div>
     <div class="overlay" id="overlay"></div>
-    <section class="support">
+
+    <section class="contact-section">
       <div class="container">
-        <div class="support-title">
-          <h1>Contact <span>Support</span></h1>
+        <div class="contact-title">
+          <h1>Contact With <span>AlphaBS</span></h1>
 
           <p>
             Have a question, found a bug, want to report a player or contact
@@ -140,8 +119,8 @@
           </p>
         </div>
 
-        <div class="support-box">
-          <form id="supportForm">
+        <div class="contact-box">
+          <form id="contactForm">
             <div class="input-group">
               <label>Name</label>
 
@@ -180,7 +159,7 @@
             <div class="input-group">
               <label>Message</label>
 
-              <textarea id="message" maxlength="500"></textarea>
+              <textarea id="message" name="message" maxlength="500" required></textarea>
 
               <div class="counter"><span id="count">0</span>/500</div>
             </div>
@@ -194,8 +173,18 @@
             <div id="status"></div>
           </form>
         </div>
+
+        <div class="faq">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-item"><button class="faq-q" aria-expanded="false">How can I join the community? <i class="fa-solid fa-chevron-down"></i></button><div class="faq-a"><div><p>Use the Telegram and YouTube cards below. Join the Telegram channel for updates, events and giveaways.</p></div></div></div>
+          <div class="faq-item"><button class="faq-q" aria-expanded="false">How do I report a player or a scam? <i class="fa-solid fa-chevron-down"></i></button><div class="faq-a"><div><p>Fill out the form above and describe what happened. Add the player tag, links or screenshots if you have them, so the report can be reviewed faster.</p></div></div></div>
+          <div class="faq-item"><button class="faq-q" aria-expanded="false">How long does a reply take? <i class="fa-solid fa-chevron-down"></i></button><div class="faq-a"><div><p>I reply as soon as possible. Simple questions are answered quickly, while complex reports may take a little longer.</p></div></div></div>
+          <div class="faq-item"><button class="faq-q" aria-expanded="false">Can we collaborate or run a giveaway together? <i class="fa-solid fa-chevron-down"></i></button><div class="faq-a"><div><p>Yes! Send a message with the subject "Collaboration" and include your channel link and your idea.</p></div></div></div>
+          <div class="faq-item"><button class="faq-q" aria-expanded="false">I found a bug on the website. <i class="fa-solid fa-chevron-down"></i></button><div class="faq-a"><div><p>Tell me which page, device and browser you used and what went wrong. A screenshot helps a lot.</p></div></div></div>
+        </div>
       </div>
     </section>
+
     <section class="features">
       <div class="container">
         <h2>Follow me on other platforms & social media!</h2>
@@ -221,21 +210,21 @@
           </a>
 
           <a
-            href="https://discord.gg/sxbRRPRnEg"
-            class="card dsc"
+            href="https://t.me/alpbs24"
+            class="card tg"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Join AlphaBS Discord Server"
+            aria-label="Join AlphaBS Telegram Channel"
           >
-            <i class="fa-brands fa-discord alphabs_brands"></i>
-            <h3>Discord Server</h3>
-            <p>user: @alphabs24</p>
+            <i class="fa-brands fa-telegram alphabs_brands"></i>
+            <h3>Telegram Channel</h3>
+            <p>@alpbs24</p>
 
             <p>
-              Official AlphaBS community server for Brawl Stars players. Join
+              Official AlphaBS Telegram channel for Brawl Stars players. Join
               for updates, discussions, community events, teamwork, and
               exclusive content. <br />
-              Tap To Visit My Discord Server!
+              Tap To Visit My Telegram Channel!
             </p>
           </a>
           <a
@@ -259,6 +248,7 @@
         </div>
       </div>
     </section>
+
     <div class="about-modal" id="about-modal">
       <div class="about-box">
         <div class="about-top">
@@ -267,10 +257,6 @@
               <img src="logo.png" alt="Alpha Logo" />
               <span>Alpha</span>
             </div>
-
-            <a href="./index.html" class="about-home">
-              <i class="fa-solid fa-house"></i>
-            </a>
             <button class="about-theme-toggle" id="about-theme-toggle">
               <i class="fa-solid fa-moon"></i>
             </button>
@@ -314,7 +300,7 @@
 
           <p>
             Support is also available for general questions regarding the Alpha
-            YouTube channel, Discord server, social media accounts, future
+            YouTube channel, Telegram channel, social media accounts, future
             content, collaborations, community events, giveaways, or other
             official Alpha projects. We welcome constructive feedback and always
             appreciate ideas that can help improve the community.
@@ -364,10 +350,10 @@
 
     <footer>
       <div class="container">
-        © 2026 AlphaBS | Designed with HTML & CSS | ChatGPT
+        © 2025 AlphaBS | Designed with HTML & CSS | <a class="claude-link" href="https://claude.ai" target="_blank" rel="noopener noreferrer">Claude AI</a>
       </div>
     </footer>
-    <script src="./support.js"></script>
-    <script src="./script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4.4.1/dist/email.min.js"></script>
+    <script src="./script.js?v=1"></script>
   </body>
 </html>
